@@ -1,0 +1,2980 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal | Admire</title>
+    <!--IE Compatibility modes-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Mobile first-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/logo1.ico"/>
+    <!-- global styles-->
+    <link type="text/css" rel="stylesheet" href="css/components.css" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <!--End of global styles-->
+    <!--Plugin style-->
+    <link type="text/css" rel="stylesheet" href="vendors/modal/css/component.css"/>
+    <link type="text/css" rel="stylesheet" href="vendors/bootstrap-tagsinput/css/bootstrap-tagsinput.css"/>
+    <link rel="stylesheet" type="text/css" href="vendors/animate/css/animate.min.css" />
+    <!-- end of plugin styles -->
+    <link type="text/css" rel="stylesheet" href="css/pages/portlet.css"/>
+    <link type="text/css" rel="stylesheet" href="css/pages/advanced_components.css"/>
+    <link type="text/css" rel="stylesheet" href="#" id="skin_change"/>
+</head>
+<body>
+<div class="preloader" style=" position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  backface-visibility: hidden;
+  background: #ffffff;">
+    <div class="preloader_img" style="width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 48%;
+  top: 48%;
+  background-position: center;
+z-index: 999999">
+        <img src="img/loader.gif" style=" width: 40px;" alt="loading...">
+    </div>
+</div>
+<div id="wrap">
+    <div id="top">
+        <!-- .navbar -->
+        <nav class="navbar navbar-static-top">
+            <div class="container-fluid m-0">
+                <a class="navbar-brand float-left" href="index.html">
+                    <h4><img src="img/logo1.ico" class="admin_img" alt="logo"> ADMIRE ADMIN</h4>
+                </a>
+                <div class="menu">
+                    <span class="toggle-left" id="menu-toggle">
+                        <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="topnav dropdown-menu-right float-right">
+                    <div class="btn-group hidden-md-up small_device_search" data-toggle="modal"
+                         data-target="#search_modal">
+                        <i class="fa fa-search text-primary"></i>
+                    </div>
+                    <div class="btn-group">
+                        <div class="notifications no-bg">
+                            <a class="btn btn-default btn-sm messages" data-toggle="dropdown" id="messages_section"> <i
+                                    class="fa fa-envelope-o fa-1x"></i>
+                                <span class="badge badge-pill badge-warning notifications_badge_top">8</span>
+                            </a>
+                            <div class="dropdown-menu drop_box_align" role="menu" id="messages_dropdown">
+                                <div class="popover-title">You have 8 Messages</div>
+                                <div id="messages">
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/5.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data"><strong>hally</strong>
+                                                sent you an image.
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/8.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data"><strong>Meri</strong>
+                                                invitation for party.
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/7.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <strong>Remo</strong>
+                                                meeting details .
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <strong>David</strong>
+                                                upcoming events list.
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/5.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data"><strong>hally</strong>
+                                                sent you an image.
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/8.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data"><strong>Meri</strong>
+                                                invitation for party.
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/7.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <strong>Remo</strong>
+                                                meeting details .
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <strong>David</strong>
+                                                upcoming events list.
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="popover-footer">
+                                    <a href="mail_inbox.html" class="text-white">Inbox</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="notifications messages no-bg">
+                            <a class="btn btn-default btn-sm" data-toggle="dropdown" id="notifications_section"> <i
+                                    class="fa fa-bell-o"></i>
+                                <span class="badge badge-pill badge-danger notifications_badge_top">9</span>
+                            </a>
+                            <div class="dropdown-menu drop_box_align" role="menu" id="notifications_dropdown">
+                                <div class="popover-title">You have 9 Notifications</div>
+                                <div id="notifications">
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/1.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>Remo</strong>
+                                                sent you an image
+                                                <br>
+                                                <small class="primary_txt">just now.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/2.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>clay</strong>
+                                                business propasals
+                                                <br>
+                                                <small class="primary_txt">20min Back.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/3.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>John</strong>
+                                                meeting at Ritz
+                                                <br>
+                                                <small class="primary_txt">2hrs Back.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>Luicy</strong>
+                                                Request Invitation
+                                                <br>
+                                                <small class="primary_txt">Yesterday.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/1.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>Remo</strong>
+                                                sent you an image
+                                                <br>
+                                                <small class="primary_txt">just now.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/2.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>clay</strong>
+                                                business propasals
+                                                <br>
+                                                <small class="primary_txt">20min Back.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/3.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>John</strong>
+                                                meeting at Ritz
+                                                <br>
+                                                <small class="primary_txt">2hrs Back.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>Luicy</strong>
+                                                Request Invitation
+                                                <br>
+                                                <small class="primary_txt">Yesterday.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="img/mailbox_imgs/1.jpg" class="message-img avatar rounded-circle"
+                                                     alt="avatar1"></div>
+                                            <div class="col-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>Remo</strong>
+                                                sent you an image
+                                                <br>
+                                                <small class="primary_txt">just now.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="popover-footer">
+                                    <a href="#" class="text-white">View All</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="notifications request_section no-bg">
+                            <a class="btn btn-default btn-sm messages" id="request_btn"> <i
+                                    class="fa fa-sliders" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <div class="user-settings no-bg">
+                            <button type="button" class="btn btn-default no-bg micheal_btn" data-toggle="dropdown">
+                                <img src="img/admin.jpg" class="admin_img2 img-thumbnail rounded-circle avatar-img"
+                                     alt="avatar"> <strong>Micheal</strong>
+                                <span class="fa fa-sort-down white_bg"></span>
+                            </button>
+                            <div class="dropdown-menu admire_admin">
+                                <a class="dropdown-item title" href="#">
+                                    Admire Admin</a>
+                                <a class="dropdown-item" href="edit_user.html"><i class="fa fa-cogs"></i>
+                                    Account Settings</a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fa fa-user"></i>
+                                    User Status
+                                </a>
+                                <a class="dropdown-item" href="mail_inbox.html"><i class="fa fa-envelope"></i>
+                                    Inbox</a>
+
+                                <a class="dropdown-item" href="lockscreen.html"><i class="fa fa-lock"></i>
+                                    Lock Screen</a>
+                                <a class="dropdown-item" href="login2.html"><i class="fa fa-sign-out"></i>
+                                    Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="top_search_box float-right hidden-sm-down">
+                    <form class="header_input_search float-right">
+                        <input type="text" placeholder="Search" name="search">
+                        <button type="submit">
+                            <span class="font-icon-search"></span>
+                        </button>
+                        <div class="overlay"></div>
+                    </form>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- /.navbar -->
+        <!-- /.head -->
+    </div>
+    <!-- /#top -->
+    <div class="wrapper">
+        <div id="left">
+            <div class="menu_scroll">
+                <div class="left_media">
+                    <div class="media user-media">
+                        <div class="user-media-toggleHover">
+                            <span class="fa fa-user"></span>
+                        </div>
+                        <div class="user-wrapper">
+                            <a class="user-link" href="#">
+                                <img class="media-object img-thumbnail user-img rounded-circle admin_img3" alt="User Picture"
+                                     src="img/admin.jpg">
+                                <p class="user-info menu_hide">Welcome Micheal</p>
+                            </a>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+                <ul id="menu">
+                    <li>
+                        <a href="index1.html">
+                            <i class="fa fa-home"></i>
+                            <span class="link-title menu_hide">&nbsp;Dashboard 1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-tachometer"></i>
+                            <span class="link-title menu_hide">&nbsp;Dashboard 2
+
+                            </span>
+                        </a>
+                    </li>
+                    <li class="dropdown_menu active">
+                        <a href="javascript:;">
+                            <i class="fa fa-anchor"></i>
+                            <span class="link-title menu_hide">&nbsp; Components</span>
+                            <span class="fa arrow menu_hide"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="general_components.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; General Components
+                                </a>
+                            </li>
+                            <li>
+                                <a href="cards.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    <span class="link-title">&nbsp;Cards</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="transitions.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Transitions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="buttons.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Buttons
+                                </a>
+                            </li>
+                            <li>
+                                <a href="icons.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Icons
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tooltips.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Tooltips
+                                </a>
+                            </li>
+                            <li>
+                                <a href="animations.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Animations
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="sliders.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Sliders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="notifications.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Notifications
+                                </a>
+                            </li>
+                            <li>
+                                <a href="p_notify.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; P-Notify
+                                </a>
+                            </li>
+                            <li>
+                                <a href="izitoast.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Izi-Toast
+                                </a>
+                            </li>
+                            <li>
+                                <a href="cropper.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Cropper
+                                </a>
+                            </li>
+                            <li>
+                                <a href="jstree.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;Js Tree
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="modal.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Modals
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="sortable.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Sortable
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sweet_alert.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Sweet alerts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="grids_layout.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Grid View
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown_menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-th-large"></i>
+                            <span class="link-title menu_hide">&nbsp; Widgets</span>
+                            <span class="fa arrow menu_hide"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="widgets1.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Widgets 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="widgets2.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Widgets 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="widgets3.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    <span class="link-title">&nbsp; Widgets 3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown_menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-pencil"></i>
+                            <span class="link-title menu_hide">&nbsp; Forms</span>
+                            <span class="fa arrow menu_hide"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="form_elements.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Form Elements
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_layouts.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Form Layouts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_validations.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Form Validations
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_editors.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Form Editors
+                                </a>
+                            </li>
+                            <li>
+                                <a href="radio_checkbox.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Radio and Checkbox
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_wizards.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Wizards
+                                </a>
+                            </li>
+                            <li>
+                                <a href="datetime_picker.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Date Time Picker
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="ratings.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Ratings
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown_menu">
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span class="link-title menu_hide">&nbsp; Tables</span>
+                            <span class="fa arrow menu_hide"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="simple_tables.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Simple Tables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="simple_datatables.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    <span class="link-title">&nbsp; Simple Data Tables </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="datatables.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Data Tables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="advanced_tables.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Advanced Tables
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown_menu">
+                        <a href="#">
+                            <i class="fa fa-bar-chart"></i>
+                            <span class="link-title menu_hide">&nbsp; Charts</span>
+                            <span class="fa arrow menu_hide"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="charts.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Flot Charts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="advanced_charts.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Advanced Charts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="chartist.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Chartist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="rickshaw.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Rickshaw Charts
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown_menu">
+                        <a href="#">
+                            <i class="fa fa-user"></i>
+                            <span class="link-title menu_hide">&nbsp; Users</span>
+                            <span class="fa arrow menu_hide"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="users.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; User Grid
+                                </a>
+                            </li>
+                            <li>
+                                <a href="add_user.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Add User
+                                </a>
+                            </li>
+                            <li>
+                                <a href="view_user.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; User Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="delete_user.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Delete User
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="calendar.html">
+                            <i class="fa fa-calendar"></i>
+                            <span class="link-title menu_hide">&nbsp; Calendar</span>
+                            <span class="badge badge-pill badge-primary float-right calendar_badge menu_hide">7</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">
+                            <i class="fa fa-picture-o"></i>
+                            <span class="link-title menu_hide"> Gallery</span>
+                        </a>
+                    </li>
+                    <li class="dropdown_menu">
+                        <a href="#">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="link-title menu_hide">&nbsp; Email</span>
+                            <span class="fa arrow menu_hide"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="mail_compose.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Compose
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mail_inbox.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Inbox
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="mail_view.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; View
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mail_sent.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Sent
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mail_spam.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Spam
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="mail_draft.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Draft
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mail_trash.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Trash
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown_menu">
+                        <a href="#">
+                            <i class="fa fa-map-marker"></i>
+                            <span class="link-title menu_hide">&nbsp; Maps</span>
+                            <span class="fa arrow menu_hide"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="maps.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Google Maps
+                                </a>
+                            </li>
+                            <li>
+                                <a href="jqvmaps.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Vector Maps
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown_menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-file"></i>
+                            <span class="link-title menu_hide">&nbsp; Pages</span>
+                            <span class="fa arrow menu_hide"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="404.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; 404
+                                </a>
+                            </li>
+                            <li>
+                                <a href="500.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; 500
+                                </a>
+                            </li>
+                            <li>
+                                <a href="login1.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Login 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="login2.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;<span class="link-title">&nbsp;Login 2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="login3.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;<span class="link-title">&nbsp;Login 3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="register1.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Register 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="register2.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;<span class="link-title">&nbsp;Register 2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="register3.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;<span class="link-title">&nbsp;Register 3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lockscreen.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Lock Screen 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lockscreen2.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Lock Screen 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lockscreen3.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Lock Screen 3
+                                </a>
+                            </li>
+                            <li>
+                                <a href="invoice.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Invoice
+                                </a>
+                            </li>
+                            <li>
+                                <a href="blank.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Blank Page
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown_menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-th"></i>
+                            <span class="link-title menu_hide">&nbsp; Layouts</span>
+                            <span class="fa arrow menu_hide"></span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="boxed.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Boxed Layout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fixed-header-boxed.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Boxed &amp; Fixed Header
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fixed-header-menu.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Fixed Header &amp; Menu
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fixed-header.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Fixed Header
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fixed-menu-boxed.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Boxed &amp; Fixed Menu
+                                </a>
+                            </li>
+                            <li>
+                                <a href="fixed-menu.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; Fixed Menu
+                                </a>
+                            </li>
+                            <li>
+                                <a href="no-header.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; No Header
+                                </a>
+                            </li>
+                            <li>
+                                <a href="no-left-sidebar.html">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp; No Left Sidebar
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown_menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-sitemap"></i>
+                            <span class="link-title menu_hide">&nbsp; Multi Level Menu</span>
+                            <span class="fa arrow menu_hide"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;Level 1
+                                    <span class="fa arrow"></span>
+                                </a>
+                                <ul class="sub-menu sub-submenu">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                            <span class="fa arrow"></span>
+                                        </a>
+                                        <ul class="sub-menu sub-submenu">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-angle-right"></i>
+                                                    &nbsp;Level 3
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-angle-right"></i>
+                                                    &nbsp;Level 3
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-angle-right"></i>
+                                                    &nbsp;Level 3
+                                                    <span class="fa arrow"></span>
+                                                </a>
+                                                <ul class="sub-menu sub-submenu">
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="fa fa-angle-right"></i>
+                                                            &nbsp;Level 4
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="fa fa-angle-right"></i>
+                                                            &nbsp;Level 4
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="fa fa-angle-right"></i>
+                                                            &nbsp;Level 4
+                                                            <span class="fa arrow"></span>
+                                                        </a>
+                                                        <ul class="sub-menu sub-submenu">
+                                                            <li>
+                                                                <a href="javascript:;">
+                                                                    <i class="fa fa-angle-right"></i>
+                                                                    &nbsp;Level 5
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:;">
+                                                                    <i class="fa fa-angle-right"></i>
+                                                                    &nbsp;Level 5
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="javascript:;">
+                                                                    <i class="fa fa-angle-right"></i>
+                                                                    &nbsp;Level 5
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <i class="fa fa-angle-right"></i>
+                                                    &nbsp;Level 4
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;Level 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="fa fa-angle-right"></i>
+                                    &nbsp;Level 1
+                                    <span class="fa arrow"></span>
+                                </a>
+                                <ul class="sub-menu sub-submenu">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                            &nbsp;Level 2
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /#menu -->
+            </div>
+        </div>
+        <!-- /#left -->
+        <div id="content" class="bg-container">
+            <header class="head">
+                <div class="main-bar">
+                   <div class="row no-gutters">
+                       <div class="col-lg-6 col-md-4 col-sm-4">
+                           <h4 class="nav_top_align">
+                               <i class="fa fa-anchor"></i>
+                               Modals
+                           </h4>
+                       </div>
+                       <div class="col-lg-6 col-md-8 col-sm-8">
+                           <ol class="breadcrumb float-right nav_breadcrumb_top_align">
+                               <li class="breadcrumb-item">
+                                   <a href="index1.html">
+                                       <i class="fa fa-home" data-pack="default" data-tags=""></i>
+                                       Dashboard
+                                   </a>
+                               </li>
+                               <li class="breadcrumb-item">
+                                   <a href="#">Components</a>
+                               </li>
+                               <li class="active breadcrumb-item">Modals</li>
+                           </ol>
+                       </div>
+                   </div>
+                </div>
+            </header>
+            <div class="outer">
+                <div class="inner bg-container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h5 class="m-t-35">Basic Modals</h5>
+                                            <span class="adv_com_fade_bottom">Simple modal with title and footer</span>
+                                            <div>
+                                                <button class="btn btn-raised btn-secondary adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#normal">Basic modal
+                                                </button>
+                                                <button class="btn btn-raised btn-secondary adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#large">Large modal
+                                                </button>
+                                                <button class="btn btn-raised btn-secondary adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#small">Small modal
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h5 class="m-t-35">
+                                                Color Variation
+                                            </h5>
+                                            <span>
+                                            Like in a normal page, you can add class to make your modal responsive.
+                                            </span>
+                                            <div>
+                                                <button class="btn btn-raised btn-secondary md-trigger adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-19">Default
+                                                </button>
+                                                <button class="btn btn-raised btn-primary md-trigger adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-16">Primary
+                                                </button>
+                                                <button class="btn btn-raised btn-info md-trigger adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-17">Info
+                                                </button>
+                                                <button class="btn btn-raised btn-success md-trigger adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-18">Success
+                                                </button>
+                                                <button class="btn btn-raised btn-warning md-trigger adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-20">Warning
+                                                </button>
+
+                                                <button class="btn btn-raised btn-danger md-trigger adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-21">Danger
+                                                </button>
+                                                <button class="btn btn-raised btn-primary adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#just_me">Just me
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card m-t-35">
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h5 class="m-t-35">Fade And Slide Effects</h5>
+                                            <span class="adv_com_fade_bottom">Simple fade modal with title and footer</span>
+                                            <div>
+                                                <button class="btn btn-raised btn-primary adv_cust_mod_btn fadein"
+                                                        data-toggle="modal" data-target="#modal-1">Fade In
+                                                </button>
+                                                <button class="btn btn-raised btn-primary adv_cust_mod_btn fadeindown"
+                                                        data-toggle="modal" data-target="#modal-fadeindown">Fade In Down
+                                                </button>
+                                                <button class="btn btn-raised btn-primary adv_cust_mod_btn slideinleft"
+                                                        data-toggle="modal" data-target="#modal-slideinleft">Slide In Left
+                                                </button>
+                                                <button class="btn btn-raised btn-primary adv_cust_mod_btn slideinright"
+                                                        data-toggle="modal" data-target="#modal-slideinright">Slide In Right
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h5 class="m-t-35">Rotate Effects</h5>
+                                            <span class="adv_com_fade_bottom">Simple rotate modal with title and footer</span>
+                                            <div>
+                                                <button class="btn btn-raised btn-success adv_cust_mod_btn rotatein"
+                                                        data-toggle="modal" data-target="#modal-rotatein">Rotate In
+                                                </button>
+                                                <button class="btn btn-raised btn-success adv_cust_mod_btn rotatedownright"
+                                                        data-toggle="modal" data-target="#modal-rotatedownright">Rotate Down Right
+                                                </button>
+                                                <button class="btn btn-raised btn-success adv_cust_mod_btn flipiny"
+                                                        data-toggle="modal" data-target="#modal-flipiny">Flip In Y
+                                                </button>
+                                                <button class="btn btn-raised btn-success adv_cust_mod_btn zoomin"
+                                                        data-toggle="modal" data-target="#modal-zoomin">Zoom In
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card m-t-35">
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h5 class="m-t-35">Transition Effects</h5>
+                                            <span>
+                                            Simple transition modal with title and footer
+                                        </span>
+                                            <div>
+                                                <button class="btn btn-raised btn-info adv_cust_mod_btn swing"
+                                                        data-toggle="modal" data-target="#modal-swing">Swing
+                                                </button>
+                                                <button class="btn btn-raised btn-info adv_cust_mod_btn tada"
+                                                        data-toggle="modal" data-target="#modal-tada">Tada
+                                                </button>
+                                                <button class="btn btn-raised btn-info adv_cust_mod_btn shake"
+                                                        data-toggle="modal" data-target="#modal-shake">Shake
+                                                </button>
+                                                <button class="btn btn-raised btn-info adv_cust_mod_btn lightspeedin"
+                                                        data-toggle="modal" data-target="#modal-lightspeedin">Light Speed In
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h5 class="m-t-35">
+                                                Bouncing Effects
+                                            </h5>
+                                            <span class="adv_com_fade_bottom">
+                                           Simple bounce modal with title and footer
+                                        </span>
+                                            <div>
+                                                <button class="btn btn-raised btn-warning adv_cust_mod_btn bounceinright"
+                                                        data-toggle="modal" data-target="#modal-2">Bounce In Right
+                                                </button>
+                                                <button class="btn btn-raised btn-warning adv_cust_mod_btn bounceindown"
+                                                        data-toggle="modal" data-target="#modal-3">Bounce In Down
+                                                </button>
+                                                <button class="btn btn-raised btn-warning adv_cust_mod_btn bounceinup"
+                                                        data-toggle="modal" data-target="#modal-bounceinup">Bounce In Up
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card m-t-35">
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h5 class="m-t-35">
+                                                Extended Modals
+                                            </h5>
+                                            <span>
+                                          Different type of modals with title and footer.
+                                        </span>
+                                            <div>
+                                                <a class="btn btn-success btn-md adv_cust_mod_btn" data-toggle="modal"
+                                                   data-href="#responsive" href="#responsive">Reponsive</a>
+                                                <a class="btn btn-primary btn-md adv_cust_mod_btn" data-toggle="modal"
+                                                   data-href="#stack1" href="#stack1">Stackable</a>
+                                                <!--<a class="btn btn-info btn-md adv_cust_mod_btn" data-toggle="modal"-->
+                                                <!--data-href="#custom" href="#custom">Custom Width</a>-->
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h5 class="m-t-35">
+                                                Fullwidth Modal With Effects
+                                            </h5>
+                                            <span class="adv_com_fade_bottom">
+                                            For fullwidth modal, add the class
+                                            <code>modal-lg</code> .
+                                        </span>
+                                            <div>
+                                                <button class="btn btn-raised btn-warning adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-4">Pulldown
+                                                </button>
+                                                <button class="btn btn-raised btn-warning adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-5">Floating
+                                                </button>
+                                                <button class="btn btn-raised btn-warning adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-6">Stretch Left
+                                                </button>
+                                                <button class="btn btn-raised btn-warning adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-7">Pull Up
+                                                </button>
+                                                <button class="btn btn-raised btn-warning adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-11">Stretch Right
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h5 class="m-t-35">3D Effects</h5>
+                                            <span>
+                                            Animated modals with title and footer
+                                        </span>
+                                            <div>
+                                                <button class="btn btn-raised btn-info adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-8">3D Expand Open
+                                                </button>
+                                                <button class="btn btn-raised btn-info adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-9">3D Big Entrance
+                                                </button>
+                                                <button class="btn btn-raised btn-info adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-10">3D Expand Up
+                                                </button>
+                                                <button class="btn btn-raised btn-info adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-14">3D Bounce
+                                                </button>
+                                                <button class="btn btn-raised btn-info adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-15">3D Pulse
+                                                </button>
+                                                <button class="btn btn-raised btn-info adv_cust_mod_btn"
+                                                        data-toggle="modal" data-target="#modal-13">3D Tossing
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end of tags input-->
+                <!-- advanced modal starts-->
+
+                <div class="modal fade" id="normal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="modalLabel">Basic Modal</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-secondary" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="large" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="modalLabelLarge">Large Modal</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-secondary" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="small" tabindex="-1" role="dialog" aria-labelledby="modalLabelSmall"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="modalLabelSmall">Small Modal</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                This is a small modal window. <br>
+                                <strong>Read:</strong> modal windows will probably tell you something important so don't
+                                forget to read what they say.
+                                <br>
+                                <strong>Close:</strong> click on the button below to close the modal.
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-secondary" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--moddal dialog -->
+                <div class="modal fade modal-fade-in-scale-up jest_me" tabindex="-1" id="just_me" role="dialog"
+                     aria-labelledby="modalLabeljust" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title text-white" id="modalLabeljust">Just me</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-primary" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" tabindex="-1" id="modal-1" role="dialog"
+                     aria-labelledby="modalLabelfade" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title text-white" id="modalLabelfade">Fade In</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-primary" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" id="modal-2" role="dialog" aria-labelledby="modalLabelbounce">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-warning">
+                                <h4 class="modal-title text-white" id="modalLabelbounce">Bounce In Right</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-warning" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" id="modal-3" role="dialog" aria-labelledby="modalLabelbouncedown">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-warning">
+                                <h4 class="modal-title text-white" id="modalLabelbouncedown">Bounce In Down</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-warning" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade pullDown" id="modal-4" role="dialog" aria-labelledby="modalLabelnews">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-warning">
+                                <h4 class="modal-title text-white" id="modalLabelnews">Pulldown</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-warning" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade floating" id="modal-5" role="dialog" aria-labelledby="modalLabelfall">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-warning">
+                                <h4 class="modal-title text-white" id="modalLabelfall">Floating</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-warning" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade stretchLeft" id="modal-6" role="dialog" aria-labelledby="modalLabelsidefall1">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-warning">
+                                <h4 class="modal-title text-white" id="modalLabelsidefall1">Stretch Left</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-warning" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade pullUp" id="modal-7" role="dialog" aria-labelledby="modalLabelsticky">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-warning">
+                                <h4 class="modal-title text-white" id="modalLabelsticky">Pull Up</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-warning" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade expandOpen" id="modal-8" role="dialog" aria-labelledby="my3dlabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-info">
+                                <h4 class="modal-title text-white" id="my3dlabel">3D Expand Open</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info" data-dismiss="modal">Close Me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade bigEntrance" id="modal-9" role="dialog" aria-labelledby="Modallabel3dflip">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content ">
+                            <div class="modal-header bg-info ">
+                                <h4 class="modal-title text-white" id="Modallabel3dflip">3D Big Entrance </h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade slideExpandUp" id="modal-10" role="dialog" aria-labelledby="Modallabel3dsign">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content ">
+                            <div class="modal-header bg-info ">
+                                <h4 class="modal-title text-white" id="Modallabel3dsign">3D Expand Up</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-info" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade stretchRight" id="modal-11" role="dialog" aria-labelledby="modalLabelsidefall2">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-warning">
+                                <h4 class="modal-title text-white" id="modalLabelsidefall2">Stretch Right</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-warning" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md-modal md-effect-12" id="modal-12">
+                    <div class="md-content">
+                        <h3>Modal Dialog</h3>
+                        <div class="modal-red">
+                            <p>
+                                This is a modal window. You can do the following things with it:
+                            </p>
+                            <ul>
+                                <li>
+                                    <strong>Read:</strong> modal windows will probably tell you something important so
+                                    don't forget to read what they say.
+                                </li>
+                                <li>
+                                    <strong>Look:</strong> a modal window enjoys a certain kind of attention; just look
+                                    at it and appreciate its presence.
+                                </li>
+                                <li>
+                                    <strong>Close:</strong> click on the button below to close the modal.
+                                </li>
+                            </ul>
+                            <button class="btn btn-modal btn-secondary md-close">Close me!</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade tossing" id="modal-13" role="dialog" aria-labelledby="Modallabel3dslit">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content ">
+                            <div class="modal-header bg-info ">
+                                <h4 class="modal-title text-white" id="Modallabel3dslit">3D tossing</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-info" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade bounce" id="modal-14" role="dialog" aria-labelledby="Modallabel3drotate">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content ">
+                            <div class="modal-header bg-info ">
+                                <h4 class="modal-title text-white" id="Modallabel3drotate">3D Bounce</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-info" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade pulse" id="modal-15" role="dialog" aria-labelledby="Modallabel3drotateinleft">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content ">
+                            <div class="modal-header bg-info ">
+                                <h4 class="modal-title text-white" id="Modallabel3drotateinleft">3D Pulse</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-info " data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-16" role="dialog" aria-labelledby="modalLabelprimary">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title text-white" id="modalLabelprimary">Primary Modal</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-primary" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-17" role="dialog" aria-labelledby="modalLabelinfo">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-info">
+                                <h4 class="modal-title text-white" id="modalLabelinfo">Info Modal</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-info" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-18" role="dialog" aria-labelledby="modalLabelsuccess">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success">
+                                <h4 class="modal-title text-white" id="modalLabelsuccess">Success Modal</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-success" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-19" role="dialog" aria-labelledby="modalLabeldefault">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="modalLabeldefault">Default Modal</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-secondary" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-20" role="dialog" aria-labelledby="modalLabelwarn">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-warning">
+                                <h4 class="modal-title text-white" id="modalLabelwarn">Warning Modal</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-warning" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-21" role="dialog" aria-labelledby="modalLabeldanger">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-danger">
+                                <h4 class="modal-title text-white" id="modalLabeldanger">Danger Modal</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-danger" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- end modals-->
+                </div>
+                <!--- responsive model -->
+                <div class="modal fade in display_none" id="responsive" tabindex="-1" role="dialog" aria-hidden="false">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success">
+                                <h4 class="modal-title text-white">Responsive</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h4>Some More data</h4>
+                                        <p>
+                                            <input id="name" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                        <p>
+                                            <input id="name1" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                        <p>
+                                            <input id="name2" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                        <p>
+                                            <input id="name3" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                        <p>
+                                            <input id="name4" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                        <p>
+                                            <input id="name5" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4>Some More data</h4>
+                                        <p>
+                                            <input id="name6" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                        <p>
+                                            <input id="name7" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                        <p>
+                                            <input id="name8" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                        <p>
+                                            <input id="name9" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                        <p>
+                                            <input id="name10" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                        <p>
+                                            <input id="name41" name="name" type="text" placeholder="Your name"
+                                                   class="form-control"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                                <button type="button" class="btn btn-success">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END modal-->
+                <!--- stack1 model -->
+                <div class="modal fade bs-example-modal-sm in display_none" id="stack1" tabindex="-1" role="dialog"
+                     aria-hidden="false">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title text-white">Stack One</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>One fine body…</p>
+                                <p>One fine body…</p>
+                                <p>One fine body…</p>
+                                <p>
+                                    Name:
+                                    <input id="name21" type="text" name="name" class="form-control"/>
+                                </p>
+                                <p>
+                                    Password:
+                                    <input id="name22" type="password" name="password" class="form-control">
+                                </p>
+                                <a class="btn btn-secondary" data-toggle="modal" href="#stack2">Launch modal</a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                                <button type="button" class="btn btn-primary">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- stack2 modal-->
+                <div class="modal fade bs-example-modal-md in display_none" id="stack2" tabindex="-1" role="dialog"
+                     aria-hidden="false">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title text-white">Stack two</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>One fine body…</p>
+                                <p>One fine body…</p>
+                                <p>
+                                    Name:
+                                    <input id="name11" name="name" type="text" class="form-control"></p>
+                                <p>
+                                    Password:
+                                    <input id="name12" name="name" type="password" class="form-control"></p>
+                                <a class="btn btn-secondary" data-toggle="modal" href="#stack3">Launch modal</a>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                                <button type="button" class="btn btn-primary">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END modal-->
+                <!-- stack3 modal-->
+                <div class="modal fade in display_none" id="stack3" tabindex="-1" role="dialog" aria-hidden="false">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title text-white">Stack three</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>One fine body…</p>
+                                <p>
+                                    Name:
+                                    <input id="name13" name="name" type="text" class="form-control"></p>
+                                <p>
+                                    Password:
+                                    <input id="name14" name="name" type="password" class="form-control"></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                                <button type="button" class="btn btn-primary">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-rotatein" role="dialog"
+                     aria-labelledby="modalLabelrotate" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success">
+                                <h4 class="modal-title text-white" id="modalLabelrotate">Rotate In</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-rotatedownright" role="dialog"
+                     aria-labelledby="modalLabelrotate1" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success">
+                                <h4 class="modal-title text-white" id="modalLabelrotate1">Rotate Down Right</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-success" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-flipiny" role="dialog"
+                     aria-labelledby="modalLabelflip" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success">
+                                <h4 class="modal-title text-white" id="modalLabelflip">Flip In Y</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-success" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-zoomin" role="dialog"
+                     aria-labelledby="modalLabelzoom" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-success">
+                                <h4 class="modal-title text-white" id="modalLabelzoom">Zoom In</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn  btn-success" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-swing" role="dialog"
+                     aria-labelledby="modalLabelswing" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-info">
+                                <h4 class="modal-title text-white" id="modalLabelswing">Swing</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-info" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-tada" role="dialog"
+                     aria-labelledby="modalLabeltada" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-info">
+                                <h4 class="modal-title text-white" id="modalLabeltada">Tada</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-info" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-shake" role="dialog"
+                     aria-labelledby="modalLabelshake" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-info">
+                                <h4 class="modal-title text-white" id="modalLabelshake">Shake</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-info" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-lightspeedin" role="dialog"
+                     aria-labelledby="modalLabellightspeedin" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-info">
+                                <h4 class="modal-title text-white" id="modalLabellightspeedin">Light Speed In</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-info" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-slideinleft" role="dialog"
+                     aria-labelledby="modalLabelslide" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title text-white" id="modalLabelslide">Slide In Left</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-slideinright" role="dialog"
+                     aria-labelledby="modalLabelslide1" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title text-white" id="modalLabelslide1">Slide In Right</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-fadeindown" role="dialog"
+                     aria-labelledby="modalLabelfade3" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title text-white" id="modalLabelfade3">Fade In Down</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" id="modal-bounceinup" role="dialog"
+                     aria-labelledby="modalLabelbounceup" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header bg-warning">
+                                <h4 class="modal-title text-white" id="modalLabelbounceup">Bounce In Up</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    This is a modal window. You can do the following things with it:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Read:</strong> modal windows will probably tell you something important
+                                        so don't forget to read what they say.
+                                    </li>
+                                    <li>
+                                        <strong>Look:</strong> a modal window enjoys a certain kind of attention; just
+                                        look at it and appreciate its presence.
+                                    </li>
+                                    <li>
+                                        <strong>Close:</strong> click on the button below to close the modal.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-warning" data-dismiss="modal">Close me!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ajax-modal modal-->
+                <!-- end of advanced modals-->
+                <!-- /.inner -->
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="search_modal" tabindex="-1" role="dialog"
+                 aria-hidden="true">
+                <form>
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span class="float-right" aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="input-group search_bar_small">
+                                <input type="text" class="form-control" placeholder="Search..." name="search">
+                                <span class="input-group-btn">
+        <button class="btn btn-secondary" type="submit"><i class="fa fa-search"></i></button>
+      </span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- /.outer -->
+    </div>
+    <!-- /#content -->
+    <div id="request_list">
+        <div class="request_scrollable">
+            <ul class="nav nav-tabs m-t-15">
+                <li class="nav-item">
+                    <a class="nav-link active text-center" href="#settings" data-toggle="tab">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#favourites" data-toggle="tab">Favorites</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="settings">
+                    <div id="settings_section">
+                        <div class="layout_styles mx-3">
+                            <div class="row">
+                                <div class="col-12 m-t-35">
+                                    <h4>Layout settings</h4>
+                                </div>
+                            </div>
+                            <form autocomplete="off">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="float-left m-t-20">Fixed Header</div>
+                                        <div class="float-right m-t-15">
+                                            <div id="setting_fixed_nav">
+                                                <input class="make-switch" data-on-text="ON" data-off-text="OFF" type="checkbox"
+                                                       data-size="small">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="float-left m-t-20">Fixed Menu</div>
+                                        <div class="float-right m-t-15">
+                                            <div id="setting_fixed_menunav">
+                                                <input class="make-switch" data-on-text="ON" data-off-text="OFF" name="radioBox" type="checkbox"
+                                                       data-size="small">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="float-left m-t-20">No Breadcrumb</div>
+                                        <div class="float-right m-t-15">
+                                            <div id="setting_breadcrumb">
+                                                <input class="make-switch" data-on-text="ON" data-off-text="OFF" type="checkbox"
+                                                       data-size="small">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="mx-3">
+                            <div class="row">
+                                <div class="col-12 m-t-35">
+                                    <h4 class="setting_title">General Settings</h4>
+                                </div>
+                            </div>
+                            <div class="data m-t-5">
+                                <div class="row">
+                                    <div class="col-2"><i class="fa fa-bell-o setting_ions text-info"></i></div>
+                                    <div class="col-7">
+                                        <span class="chat_name">Notifications</span><br/>
+                                        Get new notifications
+                                    </div>
+                                    <div class="col-2 checkbox float-right">
+                                        <label class="text-info">
+                                            <input type="checkbox" value="" checked>
+                                            <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data">
+                                <div class="row">
+                                    <div class="col-2"><i class="fa fa-envelope-o setting_ions text-danger"></i>
+                                    </div>
+                                    <div class="col-7">
+                                        <span class="chat_name">Messages</span><br/>
+                                        Get new messages
+                                    </div>
+                                    <div class="col-2 checkbox float-right">
+                                        <label class="text-danger">
+                                            <input type="checkbox" value="" checked>
+                                            <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <i class="fa fa-exclamation-triangle setting_ions text-warning"></i>
+                                    </div>
+                                    <div class="col-7">
+                                        <span class="chat_name">Warnings</span><br/>
+                                        Get new warnings
+                                    </div>
+                                    <div class="col-2 checkbox float-right">
+                                        <label class="text-warning">
+                                            <input type="checkbox" value="" checked>
+                                            <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <i class="fa fa-calendar texlayout_stylest-primary setting_ions"></i>
+                                    </div>
+                                    <div class="col-7">
+                                        <span class="chat_name">Events</span><br/>
+                                        Show new events
+                                    </div>
+                                    <div class="col-2 checkbox float-right">
+                                        <label class="text-primary">
+                                            <input type="checkbox" value="" >
+                                            <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="favourites">
+                    <div id="requests" class="mx-3">
+                        <div class="m-t-35">
+                            <h4 class="setting_title">Favorites</h4>
+                        </div>
+                        <div class="data m-t-10">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="img/images1.jpg" class="message-img avatar rounded-circle" alt="avatar1"></div>
+                                <div class="col-8 message-data"><span class="chat_name">Philip J. Webb</span><br/>
+                                    Available
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa fa-circle text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="img/mailbox_imgs/8.jpg" class="message-img avatar rounded-circle" alt="avatar1">
+                                </div>
+                                <div class="col-8 message-data">
+                                    <span class="chat_name">Nancy T. Strozier</span><br/>
+                                    Away
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa fa-circle text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="img/mailbox_imgs/3.jpg" class="message-img avatar rounded-circle" alt="avatar1">
+                                </div>
+                                <div class="col-8 message-data">
+                                    <span class="chat_name">Robbinson</span><br/>
+                                    Offline
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa fa-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="setting_title">Contacts</h4>
+                        <div class="data m-t-10">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="img/mailbox_imgs/7.jpg" class="message-img avatar rounded-circle" alt="avatar1">
+                                </div>
+                                <div class="col-8 message-data">
+                                    <span class="chat_name">Chester Hardesty</span><br/>
+                                    Busy
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa fa-circle text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="img/mailbox_imgs/2.jpg" class="message-img avatar rounded-circle"
+                                         alt="avatar1"></div>
+                                <div class="col-8 message-data">
+                                    <span class="chat_name">Peter</span><br/>
+                                    Online
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa fa-circle text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="img/mailbox_imgs/6.jpg" class="message-img avatar rounded-circle" alt="avatar1">
+                                </div>
+                                <div class="col-8 message-data">
+                                    <span class="chat_name">Devin Hartsell</span><br/>
+                                    Available
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa fa-circle text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="img/mailbox_imgs/4.jpg" class="message-img avatar rounded-circle"
+                                         alt="avatar1"></div>
+                                <div class="col-8 message-data">
+                                    <span class="chat_name">Kimy Zorda</span><br/>
+                                    Available
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa fa-circle text-success"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data">
+                            <div class="row">
+                                <div class="col-2">
+                                    <img src="img/mailbox_imgs/5.jpg" class="message-img avatar rounded-circle"
+                                         alt="avatar1"></div>
+                                <div class="col-8 message-data">
+                                    <span class="chat_name">Jessica Bell</span><br/>
+                                    Offline
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa fa-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#content -->
+    <div id="right">
+        <div class="right_content">
+            <div class="well-small dark m-t-15">
+                <div class="row m-0">
+                    <div class="col-lg-12 p-d-0">
+                        <div class="skinmulti_btn" onclick="javascript:loadjscssfile('blue_black_skin.css','css')">
+                            <div class="skin_blue skin_size b_t_r"></div>
+                            <div class="skin_blue_border skin_shaddow skin_size b_b_r"></div>
+                        </div>
+                        <div class="skinmulti_btn" onclick="javascript:loadjscssfile('green_black_skin.css','css')">
+                            <div class="skin_green skin_size b_t_r"></div>
+                            <div class="skin_green_border skin_shaddow skin_size b_b_r"></div>
+                        </div>
+                        <div class="skinmulti_btn" onclick="javascript:loadjscssfile('purple_black_skin.css','css')">
+                            <div class="skin_purple skin_size b_t_r"></div>
+                            <div class="skin_purple_border skin_shaddow skin_size b_b_r"></div>
+                        </div>
+                        <div class="skinmulti_btn" onclick="javascript:loadjscssfile('orange_black_skin.css','css')">
+                            <div class="skin_orange skin_size b_t_r"></div>
+                            <div class="skin_orange_border skin_shaddow skin_size b_b_r"></div>
+                        </div>
+                        <div class="skinmulti_btn" onclick="javascript:loadjscssfile('red_black_skin.css','css')">
+                            <div class="skin_red skin_size b_t_r"></div>
+                            <div class="skin_red_border skin_shaddow skin_size b_b_r"></div>
+                        </div>
+                        <div class="skinmulti_btn" onclick="javascript:loadjscssfile('mint_black_skin.css','css')">
+                            <div class="skin_mint skin_size b_t_r"></div>
+                            <div class="skin_mint_border skin_shaddow skin_size b_b_r"></div>
+                        </div>
+                        <!--</div>-->
+                        <div class="skin_btn skinsingle_btn skin_blue b_r height_40 skin_shaddow"
+                             onclick="javascript:loadjscssfile('blue_skin.css','css')"></div>
+                        <div class="skin_btn skinsingle_btn skin_green b_r height_40 skin_shaddow"
+                             onclick="javascript:loadjscssfile('green_skin.css','css')"></div>
+                        <div class="skin_btn skinsingle_btn skin_purple b_r height_40 skin_shaddow"
+                             onclick="javascript:loadjscssfile('purple_skin.css','css')"></div>
+                        <div class="skin_btn  skinsingle_btn skin_orange b_r height_40 skin_shaddow"
+                             onclick="javascript:loadjscssfile('orange_skin.css','css')"></div>
+                        <div class="skin_btn skinsingle_btn skin_red b_r height_40 skin_shaddow"
+                             onclick="javascript:loadjscssfile('red_skin.css','css')"></div>
+                        <div class="skin_btn skinsingle_btn skin_mint b_r height_40 skin_shaddow"
+                             onclick="javascript:loadjscssfile('mint_skin.css','css')"></div>
+                    </div>
+                    <div class="col-lg-12 text-center m-t-15">
+                        <button class="btn btn-dark button-rounded"
+                                onclick="javascript:loadjscssfile('black_skin.css','css')">Dark
+                        </button>
+                        <button class="btn btn-secondary button-rounded default_skin"
+                                onclick="javascript:loadjscssfile('default_skin.css','css')">Default
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- # right side -->
+<!-- /#wrap -->
+<!-- global scripts-->
+<script type="text/javascript" src="js/components.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+<!--End of global scripts-->
+<script type="text/javascript" src="js/pages/modals.js"></script>
+</body>
+
+</html>
