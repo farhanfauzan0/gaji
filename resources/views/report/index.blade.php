@@ -149,6 +149,26 @@
                         <!-- END EXAMPLE4 TABLE PORTLET-->
                     </div>
                 </div>
+                <br>
+                <div class="card">
+                    <div class="card-header bg-white">
+                        <i class="fa fa-database"></i>Grafik
+                    </div>
+                    <div class="card-block p-t-25">
+                        <div class="col-sm-12 col-md-12 col-xs-12">
+                            <div class="m-t-25">
+                                <div class="pull-sm-right">
+                                    <div class="tools pull-sm-right"></div>
+                                </div>
+                            </div>
+
+                            <canvas id="myChart" width="400" height="400"></canvas>
+
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
 
@@ -210,5 +230,44 @@
 
     </script>
     <script type="text/javascript" src="/tmpl_admin/js/pages/datatable.js"></script>
+    <script type="text/javascript" src="/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: {!! json_encode($f['jabatan']) !!},
+                datasets: [{
+                    label: 'Total',
+                    data: {!! json_encode($f['total']) !!},
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+    </script>
     <!-- end of global scripts-->
 @endsection
