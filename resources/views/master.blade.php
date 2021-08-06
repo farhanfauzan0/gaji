@@ -44,7 +44,7 @@ z-index: 999999">
             <nav class="navbar navbar-static-top">
                 <div class="container-fluid m-0">
                     <a class="navbar-brand float-left" href="/">
-                        <h4> Admin</h4>
+                        <h4> {{ Auth::guard('web')->user()->nama }}</h4>
                     </a>
                     <div class="menu">
                         <span class="toggle-left" id="menu-toggle">
@@ -119,7 +119,7 @@ z-index: 999999">
                                 </a>
                             </li>
                         @endif
-                        @if (Auth::guard('web')->user()->nama == 'Admin' || Auth::guard('web')->user()->nama == 'Pemilik')
+                        @if (Auth::guard('web')->user()->nama == 'Admin' || Auth::guard('web')->user()->nama == 'Pemilik' || Auth::guard('web')->user()->nama == 'Pembina')
                             <li>
                                 <a href="{{ route('report.index') }}">
                                     <i class="fa fa-book"></i>
