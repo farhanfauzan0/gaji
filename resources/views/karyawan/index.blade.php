@@ -188,7 +188,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content ">
                         <div class="modal-header bg-info ">
-                            <h4 class="modal-title text-white" id="Modallabel3dsign">Edit Data Pasien</h4>
+                            <h4 class="modal-title text-white" id="Modallabel3dsign">Edit Data Karyawan</h4>
                         </div>
 
                         <div class="modal-body body-edit">

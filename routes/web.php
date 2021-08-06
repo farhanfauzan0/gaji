@@ -29,12 +29,12 @@ Route::post('/login/post', [Authcontroller::class, 'login_web_post'])->name('pos
 Route::middleware(['auth:web'])->group(function () {
     Route::get('/', [Indexcontroller::class, 'index'])->name('index');
 
-            Route::resource('karyawan', Karyawancontroller::class);
-            Route::resource('jabatan', Jabatancontroller::class);
-            Route::resource('data', Datacontroller::class);
+    Route::resource('karyawan', Karyawancontroller::class);
+    Route::resource('jabatan', Jabatancontroller::class);
+    Route::resource('data', Datacontroller::class);
 
-            Route::get('/detail/data', [Datacontroller::class, 'get_detail'])->name('get.detail');
-        
+    Route::get('/detail/data', [Datacontroller::class, 'get_detail'])->name('get.detail');
+
     Route::get('/report/{bln?}', [Indexcontroller::class, 'report_index'])->name('report.index');
     Route::post('/report/post', [Indexcontroller::class, 'report_post'])->name('report.post');
 
@@ -42,8 +42,4 @@ Route::middleware(['auth:web'])->group(function () {
         Auth::guard('web')->logout();
         return redirect()->route('login.admin.index');
     })->name('logout.web');
-
-    Route::get('/test', function () {
-        dd('sas');
-    });
 });
