@@ -160,6 +160,10 @@
                                 <section style="text-align: center">
 
                                     <button class="btn btn-lg btn-primary" type="submit">Simpan</button>
+                                    @if ($new === false)
+                                        <a href="{{ route('slip', ['id' => $id, 'tanggal' => $tgl]) }}" target="_blank"
+                                            class="btn btn-lg btn-primary">Slip Gaji</a>
+                                    @endif
                                 </section>
                             </form>
 

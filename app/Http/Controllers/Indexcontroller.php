@@ -91,6 +91,7 @@ class Indexcontroller extends Controller
                     'lain' => $lain
                 ];
             }
+            !empty($newdata1) ? $newdata1 : $newdata1 = [];
             foreach ($newdata1 as $value2) {
                 if (!array_key_exists($value2['jabatan'], $newdata2)) {
                     $newdata2[$value2['jabatan']]['gaji_bulan'] = $value2['gaji_bulan'];
@@ -118,7 +119,44 @@ class Indexcontroller extends Controller
         // dd($newdata);
     }
 
-    function report_post(Request $request)
+    function slip(Request $request, $id, $tanggal)
     {
+
+        $cek = Data::select('*')->whereid_karyawan($id)->first();
+        $gajiperhair = Karyawan::select('karyawans.nama', 'jabatans.per_hari', 'jabatans.lemburan', 'jabatans.gaji_bulan', 'jabatans.nama as nama_jabatan')->leftjoin('jabatans', 'jabatans.id', 'karyawans.id_jabatan')->where('karyawans.id', $id)->first();
+        // dd($cek);
+        $data = Data::select('*')->whereid_karyawan($id)->whereMonth('tanggal', $tanggal)->get();
+
+        foreach ($data as $datas) {
+            // dd($tanggal);
+            $newdata[] = [
+                'id' => $datas->id,
+                'id_karyawan' => $id,
+                'tanggal' => $datas->tanggal,
+                'lembur' => $datas->lembur,
+                'jenis_lain' => $datas->jenis_lain,
+                'jumlah_lain' => $datas->jumlah_lain,
+                'total_per_hari' => $datas->total_per_hari,
+                'lemburan' => $gajiperhair->lemburan,
+                'gaji_bulan' => $gajiperhair->gaji_bulan,
+                'nama' => $gajiperhair->nama,
+                'nama_jabatan' => $gajiperhair->nama_jabatan
+            ];
+        }
+
+        $totallembur = 0;
+        $totallain = 0;
+        $totalgaji = 0;
+        $gajibulan = 0;
+        foreach ($newdata as $newdatas) {
+            $totallembur += $newdatas['lembur'];
+            $totallain += $newdatas['jumlah_lain'];
+            $totalgaji += $newdatas['total_per_hari'];
+            $gajibulan = $newdatas['gaji_bulan'];
+        }
+
+        // dd($gajibulan);
+
+        return view('gaji.slip', ['data' => $newdata, 'lembur' => $totallembur, 'lain' => $totallain, 'gaji' => $totalgaji, 'gaji_bulan' => $gajibulan]);
     }
 }

@@ -49,7 +49,7 @@ class Datacontroller extends Controller
                 foreach ($request->tanggal as $inddata => $tgl) {
                     $detail = Data::find($request->id[$inddata]);
                     $detail->id_karyawan = $request->id_karyawan;
-                    $detail->tanggal = $request->tanggal[$inddata];
+                    $detail->tanggal = $tgl;
                     $detail->lembur = $request->lembur[$inddata] ?: '0';
                     $detail->jenis_lain = $request->jenis_lain[$inddata] ?: '-';
                     $detail->jumlah_lain = $request->jumlah_lain[$inddata] ?: '0';
@@ -60,7 +60,7 @@ class Datacontroller extends Controller
                 foreach ($request->tanggal as $inddata => $tgl) {
                     $detail = new Data();
                     $detail->id_karyawan = $request->id_karyawan;
-                    $detail->tanggal = $request->tanggal[$inddata];
+                    $detail->tanggal = $tgl;
                     $detail->lembur = $request->lembur[$inddata] ?: '0';
                     $detail->jenis_lain = $request->jenis_lain[$inddata] ?: '-';
                     $detail->jumlah_lain = $request->jumlah_lain[$inddata] ?: '0';
@@ -142,44 +142,41 @@ class Datacontroller extends Controller
             return redirect()->route('data.index')->with('success', 'periksa data kembali');
         }
 
-        $cek = Data::select('*')->whereid_karyawan($request->id)->first();
+        $cek = Data::select('*')->whereid_karyawan($request->id)->get();
         $gajiperhair = Karyawan::select('jabatans.per_hari', 'jabatans.lemburan', 'jabatans.gaji_bulan')->leftjoin('jabatans', 'jabatans.id', 'karyawans.id_jabatan')->where('karyawans.id', $request->id)->first();
         // dd($cek);
-        if (!empty($cek)) {
-            $data = Data::select('*')->whereid_karyawan($request->id)->get();
-            $date = date('m-Y', strtotime($cek->tanggal));
-            if ($date == $request->tanggal) {
-                foreach ($data as $datas) {
-                    // dd($request->tanggal);
-                    $newdata[] = [
-                        'id' => $datas->id,
-                        'id_karyawan' => $request->id,
-                        'tanggal' => $datas->tanggal,
-                        'lembur' => $datas->lembur,
-                        'jenis_lain' => $datas->jenis_lain,
-                        'jumlah_lain' => $datas->jumlah_lain,
-                        'total_per_hari' => $datas->total_per_hari,
-                        'lemburan' => $gajiperhair->lemburan,
-                        'gaji_bulan' => $gajiperhair->gaji_bulan
-                    ];
-                }
-            } else {
-                $ndate = $this->create_date($request->tanggal);
-                foreach ($ndate as $ndates) {
-                    $newdata[] = [
-                        'id' => '',
-                        'id_karyawan' => $request->id,
-                        'tanggal' => $ndates,
-                        'lembur' => '0',
-                        'jenis_lain' => '',
-                        'jumlah_lain' => '0',
-                        'total_per_hari' => $gajiperhair->per_hari,
-                        'lemburan' => $gajiperhair->lemburan,
-                        'gaji_bulan' => $gajiperhair->gaji_bulan
-                    ];
-                }
+
+
+        foreach ($cek as $ind => $ceks) {
+            # code...
+            $date[$ind] = date('m-Y', strtotime($ceks->tanggal));
+            if ($date[$ind] = $request->tanggal) {
+                $status = true;
+                $data = Data::select('*')->whereid_karyawan($request->id)->whereMonth('tanggal', $date[$ind])->get();
             }
-        } else {
+        }
+        // dd($data);
+
+        if ($status) {
+            foreach ($data as $datas) {
+                // dd($request->tanggal);
+                $newdata[] = [
+                    'id' => $datas->id,
+                    'id_karyawan' => $request->id,
+                    'tanggal' => $datas->tanggal,
+                    'lembur' => $datas->lembur,
+                    'jenis_lain' => $datas->jenis_lain,
+                    'jumlah_lain' => $datas->jumlah_lain,
+                    'total_per_hari' => $datas->total_per_hari,
+                    'lemburan' => $gajiperhair->lemburan,
+                    'gaji_bulan' => $gajiperhair->gaji_bulan,
+                    'new' => false
+                ];
+            }
+        }
+
+        // dd($newdata);
+        if (empty($newdata)) {
             $ndate = $this->create_date($request->tanggal);
             foreach ($ndate as $ndates) {
                 $newdata[] = [
@@ -191,10 +188,13 @@ class Datacontroller extends Controller
                     'jumlah_lain' => '0',
                     'total_per_hari' => $gajiperhair->per_hari,
                     'lemburan' => $gajiperhair->lemburan,
-                    'gaji_bulan' => $gajiperhair->gaji_bulan
+                    'gaji_bulan' => $gajiperhair->gaji_bulan,
+                    'new' => true
                 ];
             }
         }
+
+        //
         $totallembur = 0;
         $totallain = 0;
         $totalgaji = 0;
@@ -208,7 +208,7 @@ class Datacontroller extends Controller
 
         // dd($gajibulan);
 
-        return view('gaji.detail', ['data' => $newdata, 'lembur' => $totallembur, 'lain' => $totallain, 'gaji' => $totalgaji, 'gaji_bulan' => $gajibulan]);
+        return view('gaji.detail', ['data' => $newdata, 'lembur' => $totallembur, 'lain' => $totallain, 'gaji' => $totalgaji, 'gaji_bulan' => $gajibulan, 'id' => $request->id, 'tgl' => $request->tanggal, 'new' => $newdata[0]['new']]);
     }
 
     function create_date($date)

@@ -38,6 +38,8 @@ Route::middleware(['auth:web'])->group(function () {
     Route::get('/report/{bln?}', [Indexcontroller::class, 'report_index'])->name('report.index');
     Route::post('/report/post', [Indexcontroller::class, 'report_post'])->name('report.post');
 
+    Route::get('/slip/{id?}/{tanggal?}', [Indexcontroller::class, 'slip'])->name('slip');
+
     Route::get('/logout/admin', function () {
         Auth::guard('web')->logout();
         return redirect()->route('login.admin.index');
