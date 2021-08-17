@@ -157,7 +157,7 @@ class Datacontroller extends Controller
         }
         // dd($data);
 
-        if ($status) {
+        if (!empty($status)) {
             foreach ($data as $datas) {
                 // dd($request->tanggal);
                 $newdata[] = [
